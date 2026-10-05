@@ -18,3 +18,13 @@ def test_health_check() -> None:
         "status": "ok",
         "service": "Carmencita Express Backend",
     }
+
+
+def test_auth_and_management_routes_are_registered() -> None:
+    paths = set(app.openapi()["paths"])
+    assert "/api/v1/auth/login" in paths
+    assert "/api/v1/auth/refresh" in paths
+    assert "/api/v1/auth/me" in paths
+    assert "/api/v1/users" in paths
+    assert "/api/v1/roles" in paths
+    assert "/api/v1/permissions" in paths
