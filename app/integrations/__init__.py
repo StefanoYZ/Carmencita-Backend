@@ -1,1 +1,0 @@
-"""External integration composition package."""
