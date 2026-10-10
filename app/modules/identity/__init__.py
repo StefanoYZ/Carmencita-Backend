@@ -1,1 +1,1 @@
-"""Technical identity primitives; persistence and endpoints come later."""
+"""Authentication, authorization, and internal-user management."""
